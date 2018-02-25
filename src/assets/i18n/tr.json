@@ -1,0 +1,12 @@
+{
+  "HELLO": "hola",
+  "Home" : "Ev",
+  "Age" : "Yaş",
+  "Name" : "Ad",
+  "reqerror" : "Yaş girilmeli",
+  "greatererr" : "Yaş 18'den büyük olmalı",
+  "submit" : "Gönder",
+  "home" : "Anasayfa",
+  "about" : "Hakkında",
+  "contact" : "İletişim"
+}

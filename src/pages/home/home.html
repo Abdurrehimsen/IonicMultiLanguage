@@ -1,17 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>{{ 'Home' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <form [formGroup]="todo" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>{{ 'Age' | translate }}</ion-label>
+        <ion-input type="number" formControlName="title" (input)="console()"></ion-input>
+        <button ion-button color="secondary" (click)='openFilters();' item-right>{{toggle}}</button>
+      </ion-item>
+
+      <ion-item *ngIf="title.hasError('required') && title.touched" >
+        <p>{{ 'reqerror' | translate }} </p>
+      </ion-item>
+      <ion-item *ngIf="title.hasError('too young') && title.touched" >
+        <p>* {{ 'greatererr' | translate }} </p>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{ 'Name' | translate }}</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!todo.valid">{{ 'submit' | translate }}</button>
+    </form>
 </ion-content>

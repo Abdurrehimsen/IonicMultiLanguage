@@ -1,0 +1,12 @@
+{
+  "HELLO": "hello",
+  "Home" : "Home",
+  "Age" : "Age",
+  "Name" : "Name",
+  "reqerror" : "age required",
+  "greatererr" : "Age must be greater than 18",
+  "submit" : "Submit",
+  "home" : "Home",
+  "about" : "About",
+  "contact" : "Contact"
+}
